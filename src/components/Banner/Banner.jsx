@@ -12,7 +12,7 @@ const Banner = () => {
           className="max-w-sm rounded-lg"
         />
 
-        {/* Text */}
+      
         <div>
           <div className="flex items-center w-fit mb-4 bg-purple-100 px-4 py-2 rounded-full">
             <span className="w-2 h-2 bg-purple-600 rounded-full mr-2"></span>
