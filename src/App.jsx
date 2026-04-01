@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar/NavBar"
 import Stats from "./components/Stats/Stats"
 import GetStarted from "./components/GetStarted/GetStarted"
 import PriceSection from "./components/PriceSection/PriceSection"
+import FinalPart from "./components/FinalPart/FinalPart"
 
 const fetchData = async () => {
   const res = await fetch ("/data.json")
@@ -45,6 +46,7 @@ function App() {
     </Suspense>
     <GetStarted />
     <PriceSection />
+    <FinalPart />
 
   
 
