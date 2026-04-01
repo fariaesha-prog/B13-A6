@@ -5,6 +5,7 @@ import Banner from "./components/Banner/Banner"
 import NavBar from "./components/NavBar/NavBar"
 import Stats from "./components/Stats/Stats"
 import GetStarted from "./components/GetStarted/GetStarted"
+import PriceSection from "./components/PriceSection/PriceSection"
 
 const fetchData = async () => {
   const res = await fetch ("/data.json")
@@ -43,6 +44,7 @@ function App() {
       <Main mainPromise={mainPromise} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} />
     </Suspense>
     <GetStarted />
+    <PriceSection />
 
   
 
