@@ -10,12 +10,19 @@ import socialIcon from '../../assets/products/design-tool.png';
 const Main = ({mainPromise, cart, addToCart, removeFromCart, clearCart}) => {
     const [data, setData] = useState([]);
     const [showCart, setShowCart] = useState(false);
+    const [notification, setNotification] = useState(null);
 
     useEffect(() => {
         fetch("/data.json")
         .then(res => res.json())
         .then(data => setData(data));
     }, []);
+
+    const handleAddToCart = (product) => {
+        addToCart(product);
+        setNotification(`${product.name} added to cart!`);
+        setTimeout(() => setNotification(null), 3000);
+    };
 
     const cartTotal = cart.reduce((total, item) => total + item.price, 0);
 
@@ -57,13 +64,19 @@ const Main = ({mainPromise, cart, addToCart, removeFromCart, clearCart}) => {
                 </div>
             </div>
 
+            {notification && (
+                <div className="fixed top-6 right-6 bg-white text-gray-900 px-6 py-3 rounded shadow-lg font-semibold z-50 border border-gray-200">
+                    {notification}
+                </div>
+            )}
+
             {!showCart ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {data.map(product => (
                         <ProductsCard 
                             key={product.id} 
                             product={product}
-                            onAddToCart={addToCart}
+                            onAddToCart={handleAddToCart}
                         />
                     ))}
                 </div>

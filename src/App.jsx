@@ -1,4 +1,5 @@
-
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 import { Suspense, useState } from "react"
 import Main from "./components/Main/Main"
 import Banner from "./components/Banner/Banner"
@@ -50,11 +51,14 @@ function App() {
     <FinalPart />
     <Footer />
 
+    <ToastContainer />
+
   
 
 
-    
-
+    <button onClick={() => handleRemove(item.id)}>
+  Remove
+</button>
     </>
   )
 }
