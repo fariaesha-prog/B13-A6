@@ -1,5 +1,5 @@
 
-import { Suspense } from "react"
+import { Suspense, useState } from "react"
 import Main from "./components/Main/Main"
 import Banner from "./components/Banner/Banner"
 import NavBar from "./components/NavBar/NavBar"
@@ -16,6 +16,8 @@ function App() {
 
   const mainPromise = fetchData();
 
+  const [showCart, setShowCart] = useState("false");
+
 
   return (
     <>
@@ -27,6 +29,11 @@ function App() {
  >
       <Main mainPromise={mainPromise} />
     </Suspense>
+
+    <button onClick={() => setShowCart(false)} className="btn">Products</button>
+    <button onClick={() => setShowCart(true)} className="btn">Cart({CaretPosition.length})</button>
+
+    
     
 
     </>
