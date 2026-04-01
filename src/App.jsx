@@ -17,23 +17,34 @@ function App() {
   const mainPromise = fetchData();
 
   const [showCart, setShowCart] = useState("false");
+  const [cart, setCart] = useState([]);
 
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
+
+  const removeFromCart = (index) => {
+    setCart(cart.filter((_, i) => i !== index));
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
     <>
-    <NavBar />
+    <NavBar cartCount={cart.length} />
     <Banner />
     <Stats />
     <Suspense fallback={
 <span className="loading loading-spinner loading-xs"></span>}
  >
-      <Main mainPromise={mainPromise} />
+      <Main mainPromise={mainPromise} cart={cart} addToCart={addToCart} removeFromCart={removeFromCart} clearCart={clearCart} />
     </Suspense>
 
-    <button onClick={() => setShowCart(false)} className="btn">Products</button>
-    <button onClick={() => setShowCart(true)} className="btn">Cart({CaretPosition.length})</button>
+  
 
-    
+
     
 
     </>

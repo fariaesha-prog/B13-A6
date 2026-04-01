@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import cartIcon from '../../assets/products/shopping-cart.png';
 
-const NavBar = () => {
-    const [cartCount, setCartCount] = useState(0);
+const NavBar = ({ cartCount = 0 }) => {
 
     return (
         <nav className="bg-white shadow-sm border-b border-blue-100">

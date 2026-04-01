@@ -8,7 +8,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["100+ templates", "ATS optimization", "Export to PDF"],
-    "icon": "FileText"
+    "icon": "writing_2327400 1.png"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["500+ templates", "Drag & drop editor", "Stock assets library"],
-    "icon": "Palette"
+    "icon": "design-tool.png"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["1TB storage", "End-to-end encryption", "Multi-device sync"],
-    "icon": "Cloud"
+    "icon": "operation.png"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Keyword tracking", "Site audit", "Backlink analysis"],
-    "icon": "TrendingUp"
+    "icon": "operation.png"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["Custom templates", "Auto tax calculation", "Download as PDF"],
-    "icon": "Receipt"
+    "icon": "operation.png"
   },
   {
     "id": 6,
@@ -63,7 +63,7 @@
     "tag": "popular",
     "tagType": "popular",
     "features": ["Blog generator", "Ad copy creator", "SEO optimization"],
-    "icon": "PenTool"
+    "icon": "writing_2327400 1.png"
   },
   {
     "id": 7,
@@ -74,7 +74,7 @@
     "tag": "new",
     "tagType": "new",
     "features": ["Kanban boards", "Reminders", "Team collaboration"],
-    "icon": "CheckSquare"
+    "icon": "operation.png"
   },
   {
     "id": 8,
@@ -85,6 +85,6 @@
     "tag": "best seller",
     "tagType": "best seller",
     "features": ["Custom domains", "Responsive design", "Drag & drop builder"],
-    "icon": "Layout"
+    "icon": "portfolio.png"
   }
 ]
